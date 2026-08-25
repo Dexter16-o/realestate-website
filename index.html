@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bhavesh Property | Buy, Sell & Rent Property</title>
+
+  <meta
+    name="description"
+    content="Bhavesh Property helps you buy, sell and rent residential and land properties across Gujarat with trusted local guidance."
+  />
+
+  <meta
+    name="keywords"
+    content="real estate Gujarat, property Ahmedabad, flats Ahmedabad, houses for sale, land for sale, Bhavesh Property"
+  />
+
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bhavesh Property | Buy, Sell & Rent Property" />
+  <meta
+    property="og:description"
+    content="Find the right property with trusted local real estate guidance."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bhaveshproperty.onrender.com/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Website CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+  <header class="site-header" id="site-header">
+
+    <div class="container header-inner">
+
+      <a href="#home" class="brand">
+        <span class="brand-mark">
+          <i class="fa-solid fa-house"></i>
+        </span>
+
+        <span class="brand-text">
+          <strong>Bhavesh Property</strong>
+          <small>Trusted Real Estate Consultant</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#properties" class="nav-link">Properties</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+        <a
+          href="https://wa.me/919909004699?text=Hello%20Bhavesh%20Property%2C%20I%20am%20looking%20for%20a%20property."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-whatsapp"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp
+        </a>
+
+      </nav>
+
+      <button
+        class="mobile-menu-btn"
+        id="mobile-menu-btn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+    <section class="hero" id="home">
+
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+
+        <div class="hero-copy">
+
+          <span class="eyebrow">
+            <i class="fa-solid fa-location-dot"></i>
+            Ahmedabad & Gujarat
+          </span>
+
+          <h1>
+            Find a place
+            <span>you'll love to call home.</span>
+          </h1>
+
+          <p>
+            Buy, sell or rent residential and land properties with
+            straightforward guidance from a local real estate consultant.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#properties" class="btn btn-primary">
+              Explore Properties
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#contact" class="btn btn-outline-light">
+              Talk to an Agent
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Property Search Box -->
+        <div class="property-search-card">
+
+          <div class="search-header">
+            <div>
+              <span class="search-label">PROPERTY SEARCH</span>
+              <h2>What are you looking for?</h2>
+            </div>
+
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+
+          <form id="property-search-form" class="property-search-form">
+
+            <div class="search-field">
+
+              <label for="search-purpose">Looking to</label>
+
+              <div class="input-wrapper">
+                <i class="fa-solid fa-hand-pointer"></i>
+
+                <select id="search-purpose" name="purpose">
+                  <option value="all">Buy, Rent or Sell</option>
+                  <option value="buy">Buy</option>
+                  <option value="rent">Rent</option>
+                  <option value="sell">Sell</option>
+                </select>
+              </div>
+
+            </div>
+
+
+            <div class="search-field">
+
+              <label for="search-type">Property Type</label>
+
+              <div class="input-wrapper">
+                <i class="fa-solid fa-building"></i>
+
+                <select id="search-type" name="type">
+                  <option value="all">Any Property</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="house">House</option>
+                  <option value="villa">Villa</option>
+                  <option value="plot">Plot / Land</option>
+                </select>
+              </div>
+
+            </div>
+
+
+            <div class="search-field">
+
+              <label for="search-location">Location</label>
+
+              <div class="input-wrapper">
+                <i class="fa-solid fa-location-dot"></i>
+
+                <select id="search-location" name="location">
+                  <option value="all">Any Location</option>
+                  <option value="ahmedabad">Ahmedabad</option>
+                  <option value="satellite">Satellite</option>
+                  <option value="surat">Surat</option>
+                  <option value="gujarat">Other Gujarat</option>
+                </select>
+              </div>
+
+            </div>
+
+
+            <button type="submit" class="btn btn-dark search-btn">
+              Search
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TRUST STATS
+    ====================================================== -->
+    <section class="trust-strip">
+
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+
+          <div>
+            <strong>Residential</strong>
+            <span>Homes & Apartments</span>
+          </div>
+        </div>
+
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+
+          <div>
+            <strong>Land & Plots</strong>
+            <span>Verified opportunities</span>
+          </div>
+        </div>
+
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+
+          <div>
+            <strong>Local Guidance</strong>
+            <span>Personalised assistance</span>
+          </div>
+        </div>
+
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+
+          <div>
+            <strong>Quick Response</strong>
+            <span>Talk directly with us</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROPERTIES
+    ====================================================== -->
+    <section class="section properties-section" id="properties">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-kicker">PROPERTY COLLECTION</span>
+
+            <h2>
+              Featured
+              <span>properties</span>
+            </h2>
+          </div>
+
+          <p>
+            Explore a selection of properties currently available.
+            Contact us for availability, pricing and site visits.
+          </p>
+
+        </div>
+
+
+        <!-- Filter Buttons -->
+        <div class="property-filters" id="property-filters">
+
+          <button
+            type="button"
+            class="filter-btn active"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="apartment"
+          >
+            Apartments
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="house"
+          >
+            Houses
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="villa"
+          >
+            Villas
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="plot"
+          >
+            Plots & Land
+          </button>
+
+        </div>
+
+
+        <!-- Property Grid -->
+        <div class="property-grid" id="property-grid">
+
+
+          <!-- PROPERTY 1 -->
+          <article
+            class="property-card"
+            data-property-type="villa"
+            data-purpose="buy"
+            data-location="surat"
+          >
+
+            <div class="property-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+                alt="Luxury villa in Surat"
+                loading="lazy"
+              />
+
+              <span class="property-badge">For Sale</span>
+
+              <button
+                type="button"
+                class="favorite-btn"
+                aria-label="Save property"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+
+            </div>
+
+            <div class="property-content">
+
+              <div class="property-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Surat, Gujarat
+              </div>
+
+              <h3>Luxury Family Villa</h3>
+
+              <p class="property-description">
+                Spacious modern villa designed for comfortable family living.
+              </p>
+
+              <div class="property-specs">
+
+                <span>
+                  <i class="fa-solid fa-bed"></i>
+                  4 BHK
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-bath"></i>
+                  3 Baths
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-ruler-combined"></i>
+                  2500 sq.ft
+                </span>
+
+              </div>
+
+              <div class="property-footer">
+
+                <div>
+                  <span class="price-label">Starting from</span>
+                  <strong>₹1.50 Cr</strong>
+                </div>
+
+                <a
+                  class="property-link"
+                  href="#contact"
+                  data-property="Luxury Family Villa"
+                >
+                  Enquire
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROPERTY 2 -->
+          <article
+            class="property-card"
+            data-property-type="apartment"
+            data-purpose="buy"
+            data-location="ahmedabad"
+          >
+
+            <div class="property-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern apartment in Ahmedabad"
+                loading="lazy"
+              />
+
+              <span class="property-badge">For Sale</span>
+
+              <button
+                type="button"
+                class="favorite-btn"
+                aria-label="Save property"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+
+            </div>
+
+            <div class="property-content">
+
+              <div class="property-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmedabad, Gujarat
+              </div>
+
+              <h3>Modern City Apartment</h3>
+
+              <p class="property-description">
+                Well-planned apartment with modern interiors and excellent connectivity.
+              </p>
+
+              <div class="property-specs">
+
+                <span>
+                  <i class="fa-solid fa-bed"></i>
+                  3 BHK
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-bath"></i>
+                  2 Baths
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-ruler-combined"></i>
+                  1800 sq.ft
+                </span>
+
+              </div>
+
+              <div class="property-footer">
+
+                <div>
+                  <span class="price-label">Starting from</span>
+                  <strong>₹1.00 Cr</strong>
+                </div>
+
+                <a
+                  class="property-link"
+                  href="#contact"
+                  data-property="Modern City Apartment"
+                >
+                  Enquire
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROPERTY 3 -->
+          <article
+            class="property-card"
+            data-property-type="apartment"
+            data-purpose="buy"
+            data-location="satellite"
+          >
+
+            <div class="property-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=85"
+                alt="Comfortable flat in Satellite Ahmedabad"
+                loading="lazy"
+              />
+
+              <span class="property-badge">Featured</span>
+
+              <button
+                type="button"
+                class="favorite-btn"
+                aria-label="Save property"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+
+            </div>
+
+            <div class="property-content">
+
+              <div class="property-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Satellite, Ahmedabad
+              </div>
+
+              <h3>Comfortable Family Flat</h3>
+
+              <p class="property-description">
+                A practical home option in a well-connected residential area.
+              </p>
+
+              <div class="property-specs">
+
+                <span>
+                  <i class="fa-solid fa-bed"></i>
+                  2 BHK
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-bath"></i>
+                  2 Baths
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-ruler-combined"></i>
+                  1200 sq.ft
+                </span>
+
+              </div>
+
+              <div class="property-footer">
+
+                <div>
+                  <span class="price-label">Starting from</span>
+                  <strong>₹80 Lakh</strong>
+                </div>
+
+                <a
+                  class="property-link"
+                  href="#contact"
+                  data-property="Comfortable Family Flat"
+                >
+                  Enquire
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROPERTY 4 -->
+          <article
+            class="property-card"
+            data-property-type="plot"
+            data-purpose="buy"
+            data-location="gujarat"
+          >
+
+            <div class="property-image property-image-placeholder">
+
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85"
+                alt="Land and plot investment opportunity in Gujarat"
+                loading="lazy"
+              />
+
+              <span class="property-badge">Land</span>
+
+              <button
+                type="button"
+                class="favorite-btn"
+                aria-label="Save property"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+
+            </div>
+
+            <div class="property-content">
+
+              <div class="property-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Gujarat
+              </div>
+
+              <h3>Residential Plot Opportunity</h3>
+
+              <p class="property-description">
+                Suitable for future residential development or long-term investment.
+              </p>
+
+              <div class="property-specs">
+
+                <span>
+                  <i class="fa-solid fa-vector-square"></i>
+                  Open Plot
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-road"></i>
+                  Road Access
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-file-circle-check"></i>
+                  Enquiry
+                </span>
+
+              </div>
+
+              <div class="property-footer">
+
+                <div>
+                  <span class="price-label">Price</span>
+                  <strong>On Request</strong>
+                </div>
+
+                <a
+                  class="property-link"
+                  href="#contact"
+                  data-property="Residential Plot Opportunity"
+                >
+                  Enquire
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="properties-note">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>
+            Property availability and pricing can change. Contact us for the latest details and site-visit availability.
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+    <section class="section services-section" id="services">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="section-kicker">WHAT WE DO</span>
+
+          <h2>
+            Real estate made
+            <span>simpler.</span>
+          </h2>
+
+          <p>
+            Whether you are buying your first home, selling a property,
+            or searching for the right investment, get practical guidance
+            throughout the process.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-house-circle-check"></i>
+            </div>
+
+            <h3>Buy a Property</h3>
+
+            <p>
+              Discover homes, apartments, villas and plots that match
+              your budget, location and requirements.
+            </p>
+
+            <a href="#contact">
+              Find a property
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-key"></i>
+            </div>
+
+            <h3>Sell Your Property</h3>
+
+            <p>
+              Get help presenting your property, reaching potential buyers
+              and handling enquiries.
+            </p>
+
+            <a href="#contact">
+              Sell with us
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-building-circle-check"></i>
+            </div>
+
+            <h3>Rent a Property</h3>
+
+            <p>
+              Looking for a rental home or a suitable tenant? Tell us
+              your requirements and we will guide you.
+            </p>
+
+            <a href="#contact">
+              Find a rental
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Investment Guidance</h3>
+
+            <p>
+              Explore land and property opportunities based on your
+              investment goals and preferred locations.
+            </p>
+
+            <a href="#contact">
+              Discuss investment
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT / AGENT
+    ====================================================== -->
+    <section class="section about-section" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-visual">
+
+          <div class="about-image-main">
+
+            <img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85"
+              alt="Real estate consultation"
+              loading="lazy"
+            />
+
+          </div>
+
+          <div class="about-experience-card">
+
+            <span class="about-experience-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </span>
+
+            <div>
+              <strong>Personal Service</strong>
+              <span>Direct communication</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+          <span class="section-kicker">ABOUT BHAVESH PROPERTY</span>
+
+          <h2>
+            Your property journey,
+            <span>with a local expert.</span>
+          </h2>
+
+          <p class="about-lead">
+            Property decisions are important. Our goal is to make the
+            process easier by understanding what you actually need
+            instead of simply showing you listings.
+          </p>
+
+          <p>
+            Bhavesh Property connects buyers, sellers and tenants with
+            residential and land opportunities across Gujarat. From the
+            first conversation to property visits and enquiries, we focus
+            on clear communication and practical guidance.
+          </p>
+
+
+          <div class="about-points">
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Understand your budget and requirements</span>
+            </div>
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Suggest suitable property options</span>
+            </div>
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Coordinate enquiries and property visits</span>
+            </div>
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Stay available throughout the process</span>
+            </div>
+
+          </div>
+
+
+          <div class="about-actions">
+
+            <a
+              href="https://wa.me/919909004699?text=Hello%20Bhavesh%20Property%2C%20I%20would%20like%20to%20discuss%20a%20property."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              WhatsApp Us
+            </a>
+
+            <a
+              href="tel:+919909004699"
+              class="btn btn-secondary"
+            >
+              <i class="fa-solid fa-phone"></i>
+              Call Now
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESS
+    ====================================================== -->
+    <section class="section process-section">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="section-kicker">HOW IT WORKS</span>
+
+          <h2>
+            From search to
+            <span>keys.</span>
+          </h2>
+
+          <p>
+            A simple process designed around your requirements.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-step">
+
+            <span class="process-number">01</span>
+
+            <div class="process-icon">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+
+            <h3>Tell Us What You Need</h3>
+
+            <p>
+              Share your preferred location, budget, property type and requirements.
+            </p>
+
+          </div>
+
+
+          <div class="process-line"></div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">02</span>
+
+            <div class="process-icon">
+              <i class="fa-solid fa-house"></i>
+            </div>
+
+            <h3>Explore Suitable Options</h3>
+
+            <p>
+              We help you identify suitable properties and discuss the next steps.
+            </p>
+
+          </div>
+
+
+          <div class="process-line"></div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">03</span>
+
+            <div class="process-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <h3>Visit & Decide</h3>
+
+            <p>
+              Arrange property visits, ask questions and move forward with confidence.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TESTIMONIALS
+    ====================================================== -->
+    <section class="section testimonials-section">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="section-kicker">CLIENT EXPERIENCE</span>
+
+          <h2>
+            People want a broker
+            <span>who listens.</span>
+          </h2>
+
+          <p>
+            The best real estate experience starts with understanding what matters to you.
+          </p>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+          <article class="testimonial-card">
+
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <blockquote>
+              “Very helpful and easy to communicate with.
+              The process felt much simpler after discussing our requirements.”
+            </blockquote>
+
+            <div class="testimonial-author">
+
+              <div class="author-avatar">C</div>
+
+              <div>
+                <strong>Client Review</strong>
+                <span>Property Enquiry</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="testimonial-card">
+
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <blockquote>
+              “Good communication and quick responses.
+              We were able to discuss the property details before visiting.”
+            </blockquote>
+
+            <div class="testimonial-author">
+
+              <div class="author-avatar">C</div>
+
+              <div>
+                <strong>Client Review</strong>
+                <span>Residential Property</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="testimonial-card">
+
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <blockquote>
+              “Professional approach and straightforward discussion.
+              It was easy to ask questions and get in touch.”
+            </blockquote>
+
+            <div class="testimonial-author">
+
+              <div class="author-avatar">C</div>
+
+              <div>
+                <strong>Client Review</strong>
+                <span>Property Consultation</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LOCATIONS
+    ====================================================== -->
+    <section class="section locations-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-kicker">AREAS WE SERVE</span>
+
+            <h2>
+              Looking for property
+              <span>near you?</span>
+            </h2>
+          </div>
+
+          <p>
+            Tell us the location you're interested in and we'll discuss
+            the options currently available.
+          </p>
+
+        </div>
+
+
+        <div class="locations-grid">
+
+          <a href="#contact" class="location-card">
+            <i class="fa-solid fa-city"></i>
+            <strong>Ahmedabad</strong>
+            <span>Residential & investment</span>
+            <i class="fa-solid fa-arrow-right location-arrow"></i>
+          </a>
+
+          <a href="#contact" class="location-card">
+            <i class="fa-solid fa-building"></i>
+            <strong>Satellite</strong>
+            <span>Homes & apartments</span>
+            <i class="fa-solid fa-arrow-right location-arrow"></i>
+          </a>
+
+          <a href="#contact" class="location-card">
+            <i class="fa-solid fa-house"></i>
+            <strong>Surat</strong>
+            <span>Homes & villas</span>
+            <i class="fa-solid fa-arrow-right location-arrow"></i>
+          </a>
+
+          <a href="#contact" class="location-card">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <strong>Other Gujarat</strong>
+            <span>Property enquiries</span>
+            <i class="fa-solid fa-arrow-right location-arrow"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT CTA
+    ====================================================== -->
+    <section class="contact-cta">
+
+      <div class="container contact-cta-inner">
+
+        <div>
+
+          <span class="section-kicker light-kicker">
+            READY TO TALK?
+          </span>
+
+          <h2>
+            Tell us what property
+            <span>you're looking for.</span>
+          </h2>
+
+          <p>
+            Share your requirements and we'll get back to you.
+          </p>
+
+        </div>
+
+
+        <div class="contact-cta-actions">
+
+          <a
+            href="https://wa.me/919909004699?text=Hello%20Bhavesh%20Property%2C%20I%20want%20help%20finding%20a%20property."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            Chat on WhatsApp
+          </a>
+
+          <a
+            href="tel:+919909004699"
+            class="btn btn-light"
+          >
+            <i class="fa-solid fa-phone"></i>
+            +91 99090 04699
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT / ENQUIRY
+    ====================================================== -->
+    <section class="section contact-section" id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-info-panel">
+
+          <span class="section-kicker">CONTACT BHAVESH PROPERTY</span>
+
+          <h2>
+            Let's find the
+            <span>right property.</span>
+          </h2>
+
+          <p>
+            Have a property requirement, want to sell your property,
+            or simply need some guidance? Send us your details and we'll
+            get in touch.
+          </p>
+
+
+          <div class="contact-methods">
+
+            <a href="tel:+919909004699" class="contact-method">
+
+              <span class="contact-method-icon">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+
+              <span>
+                <small>Call us</small>
+                <strong>+91 99090 04699</strong>
+              </span>
+
+            </a>
+
+
+            <a
+              href="mailto:bhaveshpatel8183@gmail.com"
+              class="contact-method"
+            >
+
+              <span class="contact-method-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+
+              <span>
+                <small>Email</small>
+                <strong>bhaveshpatel8183@gmail.com</strong>
+              </span>
+
+            </a>
+
+
+            <a
+              href="https://wa.me/919909004699"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-method"
+            >
+
+              <span class="contact-method-icon whatsapp-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </span>
+
+              <span>
+                <small>WhatsApp</small>
+                <strong>Message us directly</strong>
+              </span>
+
+            </a>
+
+          </div>
+
+
+          <div class="social-follow">
+
+            <span>Follow us</span>
+
+            <div>
+
+              <a
+                href="https://www.facebook.com/share/1CzpSnfcn9/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a
+                href="https://www.instagram.com/bhaveshpatel8183?igsh=d3BvY2FvcHJ6NDdv"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a
+                href="https://wa.me/919909004699"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+
+          <div class="form-header">
+
+            <span class="form-label">SEND AN ENQUIRY</span>
+
+            <h3>How can we help?</h3>
+
+            <p>
+              Fill in the details below and we'll contact you.
+            </p>
+
+          </div>
+
+
+          <form id="contact-form" class="contact-form" method="POST">
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="name">
+                  Full Name
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                />
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="email">
+                  Email Address
+                </label>
+
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  placeholder="+91 XXXXX XXXXX"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                />
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="interest">
+                  I am interested in
+                </label>
+
+                <select id="interest" name="interest" required>
+
+                  <option value="" selected disabled>
+                    Select one
+                  </option>
+
+                  <option value="buy">
+                    Buying a property
+                  </option>
+
+                  <option value="rent">
+                    Renting a property
+                  </option>
+
+                  <option value="sell">
+                    Selling my property
+                  </option>
+
+                  <option value="land">
+                    Buying / selling land
+                  </option>
+
+                  <option value="investment">
+                    Property investment
+                  </option>
+
+                  <option value="other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="budget">
+                Budget / Price Range
+              </label>
+
+              <input
+                id="budget"
+                type="text"
+                name="budget"
+                placeholder="Example: ₹50 Lakh - ₹80 Lakh"
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Your Requirement
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us the location, property type, BHK, size, or anything else you need..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <label class="consent-checkbox">
+
+              <input
+                type="checkbox"
+                name="consent"
+                required
+              />
+
+              <span>
+                I agree to be contacted regarding my property enquiry.
+              </span>
+
+            </label>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary form-submit-btn"
+              id="contact-submit-btn"
+            >
+              Send Enquiry
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+
+            <p
+              class="form-status"
+              id="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+
+        <a href="#home" class="brand footer-brand-link">
+
+          <span class="brand-mark">
+            <i class="fa-solid fa-house"></i>
+          </span>
+
+          <span class="brand-text">
+            <strong>Bhavesh Property</strong>
+            <small>Trusted Real Estate Consultant</small>
+          </span>
+
+        </a>
+
+        <p>
+          Helping buyers, sellers and tenants make better property decisions
+          across Gujarat.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Navigation</h4>
+
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Services</h4>
+
+        <a href="#contact">Buy Property</a>
+        <a href="#contact">Sell Property</a>
+        <a href="#contact">Rent Property</a>
+        <a href="#contact">Land & Plots</a>
+        <a href="#contact">Investment Guidance</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Contact</h4>
+
+        <a href="tel:+919909004699">
+          +91 99090 04699
+        </a>
+
+        <a href="mailto:bhaveshpatel8183@gmail.com">
+          bhaveshpatel8183@gmail.com
+        </a>
+
+        <span>Ahmedabad, Gujarat</span>
+
+        <div class="footer-social">
+
+          <a
+            href="https://www.facebook.com/share/1CzpSnfcn9/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/bhaveshpatel8183?igsh=d3BvY2FvcHJ6NDdv"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://wa.me/919909004699"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        © <span id="current-year"></span> Bhavesh Property. All rights reserved.
+      </p>
+
+      <p>
+        Property information is subject to availability and verification.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       FLOATING WHATSAPP
+  ====================================================== -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/919909004699?text=Hello%20Bhavesh%20Property%2C%20I%20am%20looking%20for%20a%20property."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>Chat with us</span>
+
+  </a>
+
+
+  <!-- =====================================================
+       BACK TO TOP
+  ====================================================== -->
+  <button
+    type="button"
+    class="back-to-top"
+    id="back-to-top"
+    aria-label="Back to top"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- Website JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
