@@ -209,4 +209,150 @@ document.addEventListener("DOMContentLoaded", () => {
   loading.hidden = true;
   content.hidden = false;
 
+  /* =======================================================
+   THEME SWITCHER
+======================================================= */
+
+const themeDropdown = document.querySelector(".theme-dropdown");
+const themeToggle = document.getElementById("theme-toggle");
+const themeOptions = document.querySelectorAll(".theme-option");
+
+const systemTheme = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+);
+
+function applyTheme(theme) {
+
+  const useDarkTheme =
+    theme === "dark" ||
+    (
+      theme === "system" &&
+      systemTheme.matches
+    );
+
+  document.body.classList.toggle(
+    "dark-theme",
+    useDarkTheme
+  );
+
+  themeOptions.forEach((option) => {
+    option.classList.toggle(
+      "active",
+      option.dataset.theme === theme
+    );
+  });
+
+}
+
+function setTheme(theme) {
+  localStorage.setItem(
+    "website-theme",
+    theme
+  );
+
+  applyTheme(theme);
+}
+
+
+/* Load saved theme */
+
+const savedTheme =
+  localStorage.getItem(
+    "website-theme"
+  ) || "system";
+
+applyTheme(savedTheme);
+
+
+/* Open / close theme menu */
+
+themeToggle?.addEventListener(
+  "click",
+  (event) => {
+
+    event.stopPropagation();
+
+    const isOpen =
+      themeDropdown.classList.toggle("open");
+
+    themeToggle.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+  }
+);
+
+
+/* Select theme */
+
+themeOptions.forEach((option) => {
+
+  option.addEventListener(
+    "click",
+    () => {
+
+      setTheme(
+        option.dataset.theme
+      );
+
+      themeDropdown.classList.remove(
+        "open"
+      );
+
+      themeToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+  );
+
+});
+
+
+/* Close when clicking outside */
+
+document.addEventListener(
+  "click",
+  (event) => {
+
+    if (
+      themeDropdown &&
+      !themeDropdown.contains(event.target)
+    ) {
+
+      themeDropdown.classList.remove(
+        "open"
+      );
+
+      themeToggle?.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  }
+);
+
+
+/* Follow system theme changes */
+
+systemTheme.addEventListener(
+  "change",
+  () => {
+
+    const currentTheme =
+      localStorage.getItem(
+        "website-theme"
+      ) || "system";
+
+    if (currentTheme === "system") {
+      applyTheme("system");
+    }
+
+  }
+);
+
 });

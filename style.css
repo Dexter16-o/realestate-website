@@ -2776,3 +2776,517 @@ body.dark-theme .property-modal-amenity {
     }
 
 }
+
+/* =====================================================
+   PROPERTY DETAILS PAGE
+===================================================== */
+
+.property-page-hero {
+  padding: 140px 0 55px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--surface),
+      var(--bg)
+    );
+  border-bottom: 1px solid var(--border);
+}
+
+.property-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-bottom: 16px;
+
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.property-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.property-breadcrumb a:hover {
+  color: var(--primary-dark);
+}
+
+.property-page-hero h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.1;
+
+  color: var(--text);
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.property-details-page {
+  padding: 70px 0 90px;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 60vh;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.property-details-loading {
+  min-height: 350px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.property-details-loading i {
+  color: var(--accent);
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.property-details-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 40px;
+  align-items: start;
+}
+
+
+/* =====================================================
+   PROPERTY IMAGE
+===================================================== */
+
+.property-details-image-wrapper {
+  position: sticky;
+  top: 110px;
+
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+
+  background: var(--surface);
+}
+
+.property-details-image-wrapper img {
+  display: block;
+
+  width: 100%;
+  height: min(600px, 65vh);
+
+  object-fit: cover;
+}
+
+.property-details-badge {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  background: var(--text);
+  color: var(--bg);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* =====================================================
+   DETAILS PANEL
+===================================================== */
+
+.property-details-main {
+  padding: 32px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+}
+
+.property-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+
+  padding-bottom: 28px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.property-details-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.property-details-location i {
+  color: var(--accent);
+}
+
+.property-details-header h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+
+  color: var(--text);
+}
+
+.property-details-price {
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.property-details-price span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.property-details-price strong {
+  color: var(--accent);
+  font-size: 1.45rem;
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.property-details-section {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.property-details-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 0 18px;
+
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.property-details-section h3 i {
+  color: var(--accent);
+}
+
+.property-details-section p {
+  margin: 0;
+
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   PROPERTY SPECIFICATIONS
+===================================================== */
+
+.property-details-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.property-detail-item {
+  padding: 15px;
+
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.property-detail-item span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.property-detail-item strong {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+
+/* =====================================================
+   AMENITIES
+===================================================== */
+
+.property-details-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.property-details-amenity {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 13px;
+
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.property-details-amenity i {
+  color: var(--accent);
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.property-details-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.property-details-enquiry-btn,
+.property-details-whatsapp-btn {
+  flex: 1;
+  min-width: 190px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+
+  padding: 15px 20px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.property-details-enquiry-btn {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.property-details-whatsapp-btn {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.property-details-enquiry-btn:hover,
+.property-details-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+
+/* =====================================================
+   PROPERTY NOT FOUND
+===================================================== */
+
+.property-not-found {
+  max-width: 600px;
+
+  margin: 40px auto;
+  padding: 60px 30px;
+
+  text-align: center;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+}
+
+.property-not-found > i {
+  margin-bottom: 20px;
+
+  color: var(--accent);
+  font-size: 3rem;
+}
+
+.property-not-found h2 {
+  margin-bottom: 12px;
+
+  color: var(--text);
+}
+
+.property-not-found p {
+  margin-bottom: 25px;
+
+  color: var(--muted);
+}
+
+.property-not-found a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-radius: 9px;
+
+  background: var(--accent);
+  color: #ffffff;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   DARK THEME - PROPERTY DETAILS
+===================================================== */
+
+body.dark-theme .property-page-hero,
+body.dark-theme .property-details-page {
+  background: var(--bg);
+}
+
+body.dark-theme .property-details-main,
+body.dark-theme .property-details-image-wrapper,
+body.dark-theme .property-not-found {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+body.dark-theme .property-detail-item {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+body.dark-theme .property-details-header,
+body.dark-theme .property-details-section {
+  border-color: var(--border);
+}
+
+body.dark-theme .property-page-hero h1,
+body.dark-theme .property-details-header h2,
+body.dark-theme .property-details-section h3,
+body.dark-theme .property-detail-item strong,
+body.dark-theme .property-details-amenity,
+body.dark-theme .property-not-found h2 {
+  color: var(--text);
+}
+
+body.dark-theme .property-details-section p,
+body.dark-theme .property-detail-item span,
+body.dark-theme .property-details-price span,
+body.dark-theme .property-details-location,
+body.dark-theme .property-breadcrumb,
+body.dark-theme .property-not-found p {
+  color: var(--muted);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .property-details-content {
+    grid-template-columns: 1fr;
+  }
+
+  .property-details-image-wrapper {
+    position: relative;
+    top: auto;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .property-page-hero {
+    padding: 115px 0 40px;
+  }
+
+  .property-details-page {
+    padding: 40px 0 60px;
+  }
+
+  .property-details-main {
+    padding: 22px;
+  }
+
+  .property-details-header {
+    flex-direction: column;
+  }
+
+  .property-details-price {
+    align-items: flex-start;
+  }
+
+  .property-details-specs {
+    grid-template-columns: 1fr;
+  }
+
+  .property-details-actions {
+    flex-direction: column;
+  }
+
+  .property-details-enquiry-btn,
+  .property-details-whatsapp-btn {
+    width: 100%;
+  }
+
+  .property-details-image-wrapper img {
+    height: 320px;
+  }
+
+}

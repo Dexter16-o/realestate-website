@@ -18,32 +18,121 @@
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
-    <header class="header" id="site-header">
+    <!-- =====================================================
+     HEADER
+====================================================== -->
+<header class="site-header" id="site-header">
 
-        <div class="container nav-container">
+  <div class="container header-inner">
 
-            <a href="index.html" class="logo">
-                Bhavesh Property
-            </a>
+    <a href="index.html" class="brand">
 
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="index.html#properties">Properties</a>
-                <a href="index.html#about">About</a>
-                <a href="index.html#contact">Contact</a>
-            </nav>
+      <span class="brand-mark">
+        <i class="fa-solid fa-house"></i>
+      </span>
 
-            <a href="index.html#contact" class="nav-contact-btn">
-                Contact Us
-            </a>
+      <span class="brand-text">
+        <strong>Bhavesh Property</strong>
+        <small>Trusted Real Estate Consultant</small>
+      </span>
+
+    </a>
+
+
+    <nav class="main-nav" id="main-nav">
+
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#properties" class="nav-link active">Properties</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+
+
+      <!-- Theme Dropdown -->
+      <div class="theme-dropdown">
+
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Change website theme"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-circle-half-stroke"></i>
+
+          <span class="theme-toggle-text">
+            Theme
+          </span>
+
+          <i class="fa-solid fa-chevron-down theme-chevron"></i>
+        </button>
+
+
+        <div class="theme-menu" id="theme-menu">
+
+          <button
+            type="button"
+            class="theme-option"
+            data-theme="light"
+          >
+            <i class="fa-solid fa-sun"></i>
+            <span>Light</span>
+            <i class="fa-solid fa-check theme-check"></i>
+          </button>
+
+
+          <button
+            type="button"
+            class="theme-option"
+            data-theme="dark"
+          >
+            <i class="fa-solid fa-moon"></i>
+            <span>Dark</span>
+            <i class="fa-solid fa-check theme-check"></i>
+          </button>
+
+
+          <button
+            type="button"
+            class="theme-option"
+            data-theme="system"
+          >
+            <i class="fa-solid fa-desktop"></i>
+            <span>System Default</span>
+            <i class="fa-solid fa-check theme-check"></i>
+          </button>
 
         </div>
 
-    </header>
+      </div>
 
+
+      <a
+        href="https://wa.me/919909004699?text=Hello%20Bhavesh%20Property%2C%20I%20am%20looking%20for%20a%20property."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nav-whatsapp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp
+      </a>
+
+    </nav>
+
+
+    <button
+      class="mobile-menu-btn"
+      id="mobile-menu-btn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+
+</header>
 
     <!-- =========================
          BREADCRUMB
