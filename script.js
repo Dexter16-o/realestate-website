@@ -4,6 +4,155 @@
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* =======================================================
+   PROPERTY DATA RENDERING
+   ======================================================= */
+
+const propertyGrid = document.getElementById("property-grid");
+
+const escapeHTML = (value) => {
+  if (value === null || value === undefined) return "";
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+};
+
+const getPropertyIcon = (type) => {
+  const icons = {
+    apartment: "fa-building",
+    house: "fa-house",
+    villa: "fa-house-chimney",
+    plot: "fa-map-location-dot",
+    office: "fa-building"
+  };
+
+  return icons[type] || "fa-house";
+};
+
+const renderProperties = (propertyList = properties) => {
+  if (!propertyGrid) return;
+
+  if (!Array.isArray(propertyList)) {
+    console.error("Property data is not available.");
+    return;
+  }
+
+  propertyGrid.innerHTML = propertyList
+    .map((property) => {
+      const location = property.areaName || property.city || "Ahmedabad";
+
+      const specs = [
+        property.bhk,
+        property.area,
+        property.bathrooms
+          ? `${property.bathrooms} Bath${property.bathrooms > 1 ? "s" : ""}`
+          : null
+      ]
+        .filter(Boolean)
+        .map(
+          (item) => `
+            <span>
+              <i class="fa-solid fa-check"></i>
+              ${escapeHTML(item)}
+            </span>
+          `
+        )
+        .join("");
+
+      return `
+        <article
+          class="property-card"
+          data-property-id="${escapeHTML(property.id)}"
+          data-property-type="${escapeHTML(property.type)}"
+          data-purpose="${escapeHTML(property.purpose)}"
+          data-location="${escapeHTML(location.toLowerCase())}"
+          data-category="${escapeHTML(property.category)}"
+        >
+
+          <div class="property-image">
+            <img
+              src="${escapeHTML(property.coverImage)}"
+              alt="${escapeHTML(property.title)}"
+              loading="lazy"
+            >
+
+            <span class="property-badge">
+              ${escapeHTML(property.purpose === "rent" ? "For Rent" : "For Sale")}
+            </span>
+
+            <button
+              type="button"
+              class="favorite-btn"
+              aria-label="Save ${escapeHTML(property.title)}"
+              data-property-id="${escapeHTML(property.id)}"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="property-content">
+
+            <div class="property-meta">
+              <span>
+                <i class="fa-solid ${getPropertyIcon(property.type)}"></i>
+                ${escapeHTML(
+                  property.type.charAt(0).toUpperCase() +
+                  property.type.slice(1)
+                )}
+              </span>
+
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                ${escapeHTML(location)}
+              </span>
+            </div>
+
+            <h3>${escapeHTML(property.title)}</h3>
+
+            <p class="property-description">
+              ${escapeHTML(property.description)}
+            </p>
+
+            <div class="property-specs">
+              ${specs}
+            </div>
+
+            <div class="property-footer">
+
+              <div>
+                <span class="property-price-label">
+                  ${property.purpose === "rent" ? "Rent" : "Price"}
+                </span>
+
+                <strong>${escapeHTML(property.priceDisplay)}</strong>
+              </div>
+
+              <button
+                type="button"
+                class="property-details-btn"
+                data-property-id="${escapeHTML(property.id)}"
+              >
+                View Details
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+      `;
+    })
+    .join("");
+};
+
+renderProperties();
+
   /* =======================================================
      ELEMENTS
   ======================================================= */
