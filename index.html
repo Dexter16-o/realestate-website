@@ -1787,5 +1787,196 @@
   }
   </script>
   
+  <!-- =======================================================
+     PROPERTY DETAILS MODAL
+======================================================= -->
+
+<div
+    class="property-modal"
+    id="property-modal"
+    aria-hidden="true"
+>
+    <div class="property-modal-overlay"></div>
+
+    <div
+        class="property-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="property-modal-title"
+    >
+
+        <!-- Close Button -->
+        <button
+            type="button"
+            class="property-modal-close"
+            id="property-modal-close"
+            aria-label="Close property details"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- Property Image -->
+        <div class="property-modal-image">
+            <img
+                id="property-modal-cover-image"
+                src=""
+                alt="Property"
+            >
+
+            <span
+                class="property-modal-badge"
+                id="property-modal-badge"
+            >
+                For Sale
+            </span>
+        </div>
+
+
+        <!-- Property Details -->
+        <div class="property-modal-body">
+
+            <div class="property-modal-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="property-modal-location">
+                    Ahmedabad
+                </span>
+            </div>
+
+
+            <h2 id="property-modal-title">
+                Property Title
+            </h2>
+
+
+            <p
+                class="property-modal-description"
+                id="property-modal-description"
+            >
+                Property description will appear here.
+            </p>
+
+
+            <!-- Price -->
+            <div class="property-modal-price">
+
+                <span id="property-modal-price-label">
+                    Price
+                </span>
+
+                <strong id="property-modal-price">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <!-- Property Information -->
+            <div class="property-modal-info">
+
+                <div class="property-modal-info-item">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <div>
+                        <span>Property Type</span>
+                        <strong id="property-modal-type">
+                            Apartment
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="property-modal-info-item">
+
+                    <i class="fa-solid fa-bed"></i>
+
+                    <div>
+                        <span>Configuration</span>
+                        <strong id="property-modal-bhk">
+                            3 BHK
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="property-modal-info-item">
+
+                    <i class="fa-solid fa-ruler-combined"></i>
+
+                    <div>
+                        <span>Area</span>
+                        <strong id="property-modal-area">
+                            1200 sq. ft.
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="property-modal-info-item">
+
+                    <i class="fa-solid fa-bath"></i>
+
+                    <div>
+                        <span>Bathrooms</span>
+                        <strong id="property-modal-bathrooms">
+                            2 Baths
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Amenities -->
+            <div class="property-modal-amenities">
+
+                <h3>Property Features</h3>
+
+                <div
+                    class="property-modal-amenities-list"
+                    id="property-modal-amenities-list"
+                >
+                    <!-- Amenities will be added automatically -->
+                </div>
+
+            </div>
+
+
+            <!-- Actions -->
+            <div class="property-modal-actions">
+
+                <a
+                    href="#contact"
+                    class="property-modal-enquiry-btn"
+                    id="property-modal-enquiry-btn"
+                >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Enquiry
+                </a>
+
+
+                <a
+                    href="https://wa.me/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="property-modal-whatsapp-btn"
+                    id="property-modal-whatsapp-btn"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
 </body>
 </html>

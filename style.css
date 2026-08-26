@@ -2342,3 +2342,437 @@ body.dark-theme .filter-btn.active {
     background: #d4a85c !important;
     color: #ffffff !important;
 }
+
+/* =======================================================
+   PROPERTY DETAILS MODAL
+======================================================= */
+
+.property-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.property-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* ---------- BACKGROUND OVERLAY ---------- */
+
+.property-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(5px);
+}
+
+
+/* ---------- MODAL BOX ---------- */
+
+.property-modal-content {
+    position: relative;
+    z-index: 1;
+
+    width: min(950px, 100%);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: var(--surface, #ffffff);
+    color: var(--text, #1f2937);
+
+    border-radius: 20px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(20px) scale(0.98);
+
+    transition: transform 0.25s ease;
+}
+
+.property-modal.active .property-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+/* ---------- CLOSE BUTTON ---------- */
+
+.property-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 5;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+
+    cursor: pointer;
+    font-size: 1.1rem;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.property-modal-close:hover {
+    background: var(--accent, #d4a85c);
+    transform: rotate(90deg);
+}
+
+
+/* ---------- IMAGE ---------- */
+
+.property-modal-image {
+    position: relative;
+
+    width: 100%;
+    height: 360px;
+
+    overflow: hidden;
+}
+
+.property-modal-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.property-modal-badge {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    padding: 8px 15px;
+
+    border-radius: 999px;
+
+    background: var(--accent, #d4a85c);
+    color: #ffffff;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* ---------- MODAL BODY ---------- */
+
+.property-modal-body {
+    padding: 32px;
+}
+
+
+.property-modal-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    color: var(--muted, #6b7280);
+
+    font-size: 0.95rem;
+}
+
+.property-modal-location i {
+    color: var(--accent, #d4a85c);
+}
+
+
+.property-modal-body h2 {
+    margin: 0 0 14px;
+
+    color: var(--text, #1f2937);
+
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    line-height: 1.25;
+}
+
+
+.property-modal-description {
+    margin: 0 0 24px;
+
+    color: var(--muted, #6b7280);
+
+    line-height: 1.7;
+}
+
+
+/* ---------- PRICE ---------- */
+
+.property-modal-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    margin-bottom: 28px;
+}
+
+.property-modal-price span {
+    color: var(--muted, #6b7280);
+    font-size: 0.9rem;
+}
+
+.property-modal-price strong {
+    color: var(--accent, #d4a85c);
+
+    font-size: 1.7rem;
+}
+
+
+/* ---------- PROPERTY INFORMATION ---------- */
+
+.property-modal-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.property-modal-info-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 16px;
+
+    background: var(--bg-soft, #f7f7f7);
+
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 12px;
+}
+
+
+.property-modal-info-item > i {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--accent, #d4a85c);
+    color: #ffffff;
+}
+
+
+.property-modal-info-item div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.property-modal-info-item span {
+    color: var(--muted, #6b7280);
+    font-size: 0.8rem;
+}
+
+
+.property-modal-info-item strong {
+    color: var(--text, #1f2937);
+    font-size: 0.95rem;
+}
+
+
+/* ---------- AMENITIES ---------- */
+
+.property-modal-amenities {
+    margin-bottom: 30px;
+}
+
+.property-modal-amenities h3 {
+    margin: 0 0 14px;
+
+    color: var(--text, #1f2937);
+
+    font-size: 1.2rem;
+}
+
+
+.property-modal-amenities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.property-modal-amenity {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    background: var(--bg-soft, #f7f7f7);
+
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 999px;
+
+    color: var(--text, #1f2937);
+
+    font-size: 0.9rem;
+}
+
+.property-modal-amenity i {
+    color: var(--accent, #d4a85c);
+}
+
+
+/* ---------- ACTION BUTTONS ---------- */
+
+.property-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+.property-modal-actions a {
+    flex: 1;
+
+    min-width: 180px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.property-modal-enquiry-btn {
+    background: var(--accent, #d4a85c);
+    color: #ffffff;
+}
+
+
+.property-modal-whatsapp-btn {
+    background: #25d366;
+    color: #ffffff;
+}
+
+
+.property-modal-actions a:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+
+/* =======================================================
+   DARK THEME MODAL FIXES
+======================================================= */
+
+body.dark-theme .property-modal-content {
+    background: #1c1c1e;
+    color: #f5f5f5;
+}
+
+body.dark-theme .property-modal-body h2,
+body.dark-theme .property-modal-info-item strong,
+body.dark-theme .property-modal-amenities h3,
+body.dark-theme .property-modal-amenity {
+    color: #ffffff;
+}
+
+body.dark-theme .property-modal-location,
+body.dark-theme .property-modal-description,
+body.dark-theme .property-modal-price span,
+body.dark-theme .property-modal-info-item span {
+    color: #d1d5db;
+}
+
+body.dark-theme .property-modal-info-item,
+body.dark-theme .property-modal-amenity {
+    background: #2a2a2d;
+    border-color: #3a3a3d;
+}
+
+
+/* =======================================================
+   MOBILE RESPONSIVE
+======================================================= */
+
+@media (max-width: 650px) {
+
+    .property-modal {
+        padding: 10px;
+    }
+
+    .property-modal-content {
+        max-height: 94vh;
+        border-radius: 16px;
+    }
+
+    .property-modal-image {
+        height: 250px;
+    }
+
+    .property-modal-body {
+        padding: 22px 18px;
+    }
+
+    .property-modal-info {
+        grid-template-columns: 1fr;
+    }
+
+    .property-modal-actions {
+        flex-direction: column;
+    }
+
+    .property-modal-actions a {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .property-modal-close {
+        top: 12px;
+        right: 12px;
+    }
+
+}

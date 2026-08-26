@@ -154,6 +154,177 @@ const renderProperties = (propertyList = properties) => {
 renderProperties();
 
   /* =======================================================
+   PROPERTY DETAILS MODAL
+======================================================= */
+
+const propertyModal = document.getElementById("property-modal");
+const propertyModalOverlay = propertyModal?.querySelector(
+  ".property-modal-overlay"
+);
+const propertyModalClose = document.getElementById("property-modal-close");
+
+const modalCoverImage = document.getElementById(
+  "property-modal-cover-image"
+);
+const modalBadge = document.getElementById("property-modal-badge");
+const modalLocation = document.getElementById("property-modal-location");
+const modalTitle = document.getElementById("property-modal-title");
+const modalDescription = document.getElementById(
+  "property-modal-description"
+);
+const modalPriceLabel = document.getElementById(
+  "property-modal-price-label"
+);
+const modalPrice = document.getElementById("property-modal-price");
+
+const modalType = document.getElementById("property-modal-type");
+const modalBhk = document.getElementById("property-modal-bhk");
+const modalArea = document.getElementById("property-modal-area");
+const modalBathrooms = document.getElementById(
+  "property-modal-bathrooms"
+);
+
+const modalAmenitiesList = document.getElementById(
+  "property-modal-amenities-list"
+);
+
+const modalEnquiryBtn = document.getElementById(
+  "property-modal-enquiry-btn"
+);
+
+const modalWhatsappBtn = document.getElementById(
+  "property-modal-whatsapp-btn"
+);
+
+
+/* ---------- OPEN PROPERTY MODAL ---------- */
+
+const openPropertyModal = (propertyId) => {
+  const property = properties.find(
+    (item) => item.id === propertyId
+  );
+
+  if (!property || !propertyModal) return;
+
+  /* Property image */
+  modalCoverImage.src = property.coverImage;
+  modalCoverImage.alt = property.title;
+
+  /* Basic information */
+  modalBadge.textContent =
+    property.purpose === "rent" ? "For Rent" : "For Sale";
+
+  modalLocation.textContent =
+    property.address || property.city || "Ahmedabad";
+
+  modalTitle.textContent = property.title;
+
+  modalDescription.textContent = property.description;
+
+  /* Price */
+  modalPriceLabel.textContent =
+    property.purpose === "rent" ? "Rent" : "Price";
+
+  modalPrice.textContent = property.priceDisplay;
+
+  /* Property specifications */
+  modalType.textContent =
+    property.type.charAt(0).toUpperCase() +
+    property.type.slice(1);
+
+  modalBhk.textContent =
+    property.bhk || "Not Applicable";
+
+  modalArea.textContent =
+    property.area || "Not Available";
+
+  modalBathrooms.textContent =
+    property.bathrooms
+      ? `${property.bathrooms} Bathroom${
+          property.bathrooms > 1 ? "s" : ""
+        }`
+      : "Not Applicable";
+
+  /* Amenities */
+  modalAmenitiesList.innerHTML = (property.amenities || [])
+    .map(
+      (amenity) => `
+        <span class="property-modal-amenity">
+          <i class="fa-solid fa-check"></i>
+          ${escapeHTML(amenity)}
+        </span>
+      `
+    )
+    .join("");
+
+  /* Enquiry button */
+  modalEnquiryBtn.dataset.propertyId = property.id;
+
+  /* WhatsApp button */
+  const whatsappMessage =
+    `Hello, I am interested in ${property.title} (${property.id}). ` +
+    `Please share more details.`;
+
+  modalWhatsappBtn.href =
+    `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+
+  /* Open modal */
+  propertyModal.classList.add("active");
+  propertyModal.setAttribute("aria-hidden", "false");
+
+  document.body.style.overflow = "hidden";
+};
+
+
+/* ---------- CLOSE PROPERTY MODAL ---------- */
+
+const closePropertyModal = () => {
+  if (!propertyModal) return;
+
+  propertyModal.classList.remove("active");
+  propertyModal.setAttribute("aria-hidden", "true");
+
+  document.body.style.overflow = "";
+};
+
+propertyModalClose?.addEventListener(
+  "click",
+  closePropertyModal
+);
+
+propertyModalOverlay?.addEventListener(
+  "click",
+  closePropertyModal
+);
+
+
+/* ---------- VIEW DETAILS BUTTONS ---------- */
+
+propertyGrid?.addEventListener("click", (event) => {
+  const detailsButton = event.target.closest(
+    ".property-details-btn"
+  );
+
+  if (!detailsButton) return;
+
+  const propertyId = detailsButton.dataset.propertyId;
+
+  openPropertyModal(propertyId);
+});
+
+
+/* ---------- ESCAPE KEY ---------- */
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    propertyModal?.classList.contains("active")
+  ) {
+    closePropertyModal();
+  }
+});
+
+  /* =======================================================
      ELEMENTS
   ======================================================= */
 
