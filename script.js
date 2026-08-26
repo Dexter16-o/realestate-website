@@ -986,4 +986,87 @@ document.addEventListener("DOMContentLoaded", () => {
 
   filterProperties("all");
 
+  /* =====================================================
+   THEME SWITCHER
+  ===================================================== */
+
+const themeDropdown = document.querySelector(".theme-dropdown");
+const themeToggle = document.getElementById("theme-toggle");
+const themeMenu = document.getElementById("theme-menu");
+const themeOptions = document.querySelectorAll(".theme-option");
+
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applyTheme(theme) {
+  const useDarkTheme =
+    theme === "dark" ||
+    (theme === "system" && systemTheme.matches);
+
+  document.body.classList.toggle("dark-theme", useDarkTheme);
+
+  themeOptions.forEach((option) => {
+    option.classList.toggle(
+      "active",
+      option.dataset.theme === theme
+    );
+  });
+
+  // Update PWA/browser theme color
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  if (themeColor) {
+    themeColor.setAttribute(
+      "content",
+      useDarkTheme ? "#0f172a" : "#a67c3d"
+    );
+  }
+}
+
+function setTheme(theme) {
+  localStorage.setItem("website-theme", theme);
+  applyTheme(theme);
+}
+
+/* Load saved theme */
+const savedTheme = localStorage.getItem("website-theme") || "system";
+applyTheme(savedTheme);
+
+/* Open / close dropdown */
+themeToggle.addEventListener("click", (event) => {
+  event.stopPropagation();
+
+  const isOpen = themeDropdown.classList.toggle("open");
+
+  themeToggle.setAttribute("aria-expanded", isOpen);
+});
+
+/* Select Light / Dark / System */
+themeOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const selectedTheme = option.dataset.theme;
+
+    setTheme(selectedTheme);
+
+    themeDropdown.classList.remove("open");
+    themeToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* Close dropdown when clicking outside */
+document.addEventListener("click", (event) => {
+  if (!themeDropdown.contains(event.target)) {
+    themeDropdown.classList.remove("open");
+    themeToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
+/* Follow system changes when System Default is selected */
+systemTheme.addEventListener("change", () => {
+  const currentTheme = localStorage.getItem("website-theme") || "system";
+
+  if (currentTheme === "system") {
+    applyTheme("system");
+  }
+});
+
 });
