@@ -132,14 +132,13 @@ const renderProperties = (propertyList = properties) => {
                 <strong>${escapeHTML(property.priceDisplay)}</strong>
               </div>
 
-              <button
-                type="button"
+              <a
+                 href="property-details.html?id=${encodeURIComponent(property.id)}"
                 class="property-details-btn"
-                data-property-id="${escapeHTML(property.id)}"
               >
-                View Details
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
+              View Details
+              <i class="fa-solid fa-arrow-right"></i>
+              </a>
 
             </div>
 
@@ -296,21 +295,6 @@ propertyModalOverlay?.addEventListener(
   "click",
   closePropertyModal
 );
-
-
-/* ---------- VIEW DETAILS BUTTONS ---------- */
-
-propertyGrid?.addEventListener("click", (event) => {
-  const detailsButton = event.target.closest(
-    ".property-details-btn"
-  );
-
-  if (!detailsButton) return;
-
-  const propertyId = detailsButton.dataset.propertyId;
-
-  openPropertyModal(propertyId);
-});
 
 
 /* ---------- ESCAPE KEY ---------- */

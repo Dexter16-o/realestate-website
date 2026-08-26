@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Property Details | Bhavesh Property</title>
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header" id="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Bhavesh Property
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#properties">Properties</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <a href="index.html#contact" class="nav-contact-btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         BREADCRUMB
+    ========================== -->
+    <section class="property-page-hero">
+
+        <div class="container">
+
+            <p class="property-breadcrumb">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <span>/</span>
+
+                <span id="breadcrumb-property-title">
+                    Property Details
+                </span>
+            </p>
+
+            <h1 id="property-page-title">
+                Property Details
+            </h1>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROPERTY DETAILS
+    ========================== -->
+    <main class="property-details-page">
+
+        <div class="container">
+
+            <!-- Loading State -->
+            <div
+                class="property-details-loading"
+                id="property-details-loading"
+            >
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                Loading property details...
+            </div>
+
+
+            <!-- Property Content -->
+            <div
+                class="property-details-content"
+                id="property-details-content"
+                hidden
+            >
+
+                <!-- Main Image -->
+                <div class="property-details-image-wrapper">
+
+                    <img
+                        id="property-details-main-image"
+                        src=""
+                        alt="Property"
+                    >
+
+                    <span
+                        class="property-details-badge"
+                        id="property-details-badge"
+                    >
+                        For Sale
+                    </span>
+
+                </div>
+
+
+                <!-- Main Details -->
+                <section class="property-details-main">
+
+                    <div class="property-details-header">
+
+                        <div>
+
+                            <div class="property-details-location">
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <span id="property-details-location">
+                                    Ahmedabad
+                                </span>
+                            </div>
+
+                            <h2 id="property-details-title">
+                                Property Title
+                            </h2>
+
+                        </div>
+
+
+                        <div class="property-details-price">
+
+                            <span id="property-details-price-label">
+                                Price
+                            </span>
+
+                            <strong id="property-details-price">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="property-details-section">
+
+                        <h3>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Description
+                        </h3>
+
+                        <p id="property-details-description">
+                            Property description will appear here.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Specifications -->
+                    <div class="property-details-section">
+
+                        <h3>
+                            <i class="fa-solid fa-house"></i>
+                            Property Details
+                        </h3>
+
+                        <div class="property-details-specs">
+
+                            <div class="property-detail-item">
+                                <span>Property Type</span>
+                                <strong id="property-details-type">
+                                    Apartment
+                                </strong>
+                            </div>
+
+                            <div class="property-detail-item">
+                                <span>Purpose</span>
+                                <strong id="property-details-purpose">
+                                    For Sale
+                                </strong>
+                            </div>
+
+                            <div class="property-detail-item">
+                                <span>Configuration</span>
+                                <strong id="property-details-bhk">
+                                    3 BHK
+                                </strong>
+                            </div>
+
+                            <div class="property-detail-item">
+                                <span>Area</span>
+                                <strong id="property-details-area">
+                                    1200 sq. ft.
+                                </strong>
+                            </div>
+
+                            <div class="property-detail-item">
+                                <span>Bedrooms</span>
+                                <strong id="property-details-bedrooms">
+                                    3
+                                </strong>
+                            </div>
+
+                            <div class="property-detail-item">
+                                <span>Bathrooms</span>
+                                <strong id="property-details-bathrooms">
+                                    2
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Amenities -->
+                    <div class="property-details-section">
+
+                        <h3>
+                            <i class="fa-solid fa-star"></i>
+                            Amenities & Features
+                        </h3>
+
+                        <div
+                            class="property-details-amenities"
+                            id="property-details-amenities"
+                        >
+                            <!-- Added automatically -->
+                        </div>
+
+                    </div>
+
+
+                    <!-- Actions -->
+                    <div class="property-details-actions">
+
+                        <a
+                            href="index.html#contact"
+                            class="property-details-enquiry-btn"
+                            id="property-details-enquiry-btn"
+                        >
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Enquiry
+                        </a>
+
+                        <a
+                            href="#"
+                            class="property-details-whatsapp-btn"
+                            id="property-details-whatsapp-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                            WhatsApp Enquiry
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Not Found State -->
+            <div
+                class="property-not-found"
+                id="property-not-found"
+                hidden
+            >
+                <i class="fa-solid fa-house-circle-exclamation"></i>
+
+                <h2>Property Not Found</h2>
+
+                <p>
+                    The property you are looking for is unavailable or may have been removed.
+                </p>
+
+                <a href="index.html#properties">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Properties
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Load property data first -->
+    <script src="properties.js"></script>
+
+    <!-- Property details page logic -->
+    <script src="property-details.js"></script>
+
+</body>
+</html>
